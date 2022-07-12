@@ -1,0 +1,30 @@
+Buid sql database
+activate django
+build models
+build views/templates
+
+database/models
+-USER/Chef
+    -ID
+    -User NAME
+    -First NAME
+    -Last NAME
+    -Email
+    -Password
+    -User_permissions
+    -PROFILE PIC
+    -Country
+    -About
+
+-RECIPES
+    -Chef
+    -NAME
+    -Picture
+    -Ingredients
+    -Recipe 
+
+-Comments
+    -NAME
+    -Email
+    -Body
+    -created_on
