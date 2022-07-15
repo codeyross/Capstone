@@ -1,11 +1,11 @@
 
 from django.shortcuts import render
-from .models import User, Recipes, Comments
+from .models import Chef, Recipes, Comments
 # Create your views here.
 
 def user_list(request):
-    users = User.objects.all()
-    return render(request, '/Users/rosswarren/GA-COURSE-WORK/capstone_project/backend/onlybackend/templates/user_list.html', {'users': users})
+    chefs = Chef.objects.all()
+    return render(request, '/Users/rosswarren/GA-COURSE-WORK/capstone_project/backend/onlybackend/templates/user_list.html', {'chefs': chefs})
 
 def recipe_list(request):
     recipes = Recipes.objects.all()
@@ -16,4 +16,4 @@ def comments_list(request):
     return render(request, '/Users/rosswarren/GA-COURSE-WORK/capstone_project/backend/onlybackend/templates/comment_list.html', {'comments': comments})
 
 
-    
+   
