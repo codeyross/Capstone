@@ -4,8 +4,8 @@ from unicodedata import name
 from django.db import models
 
 # Create your models here.
-class Chef(models.Model):
-    name = models.CharField(max_length=500)
+class User(models.Model):
+    chef = models.CharField(max_length=500)
     first_name = models.CharField(max_length=200)
     last_name = models.CharField(max_length=200)
     email = models.CharField(max_length=500)
@@ -20,10 +20,10 @@ class Chef(models.Model):
 #may need to add chef to recipe class for foreign key for proper link/naming
 
 class Recipes(models.Model):
-    chef = models.ForeignKey(
-                    Chef, 
+    user = models.ForeignKey(
+                    User, 
                     on_delete=models.CASCADE, 
-                    related_name='recipes', default='chef doesnt exist'
+                    related_name='recipes',
                     )
     recipe_name = models.CharField(max_length=1000, default='no recipe name')
     picture = models.TextField()
