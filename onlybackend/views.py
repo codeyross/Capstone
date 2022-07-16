@@ -9,11 +9,14 @@ def user_list(request):
 
 def recipe_list(request):
     recipes = Recipes.objects.all()
+    print(recipes)
     return render(request, '/Users/rosswarren/GA-COURSE-WORK/capstone_project/backend/onlybackend/templates/recipe_list.html', {'recipes': recipes})
 
 def comments_list(request):
     comments = Comments.objects.all()
     return render(request, '/Users/rosswarren/GA-COURSE-WORK/capstone_project/backend/onlybackend/templates/comment_list.html', {'comments': comments})
 
-
+def user_detail(request, pk):
+    user = User.objects.get(id=pk)
+    return render(request, '/Users/rosswarren/GA-COURSE-WORK/capstone_project/backend/onlybackend/templates/user_detail.html', {'user': user})
     
