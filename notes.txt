@@ -28,3 +28,14 @@ database/models
     -Email
     -Body
     -created_on
+
+Payment gateway notes
+
+home(sign in/sign up)
+searchbar(by keyword? cheflist, recipelist, nationality, Ingredients)
+Featured chef(rotate pics)
+cheflist
+takes you to chef 
+paywall
+view chef 
+recipelist

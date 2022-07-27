@@ -26,7 +26,7 @@ class Recipes(models.Model):
                     related_name='recipes',
                     )
     recipe_name = models.CharField(max_length=1000, default='no recipe name')
-    picture = models.TextField()
+    picture = models.ImageField()
     recipe_description = models.CharField(max_length=1000, default='no recipe description')
     ingredients = models.CharField(max_length=5000, default='no ingredients listed')
     recipe = models.CharField(max_length=10000, default='no recipe listed')

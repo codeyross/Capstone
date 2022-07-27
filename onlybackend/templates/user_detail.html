@@ -1,10 +1,11 @@
-<h2>{{ user.chef }} <a href="">Chef Details</a></h2>
-<h3>{{ user.profile_pic }}
+{% extends 'base.html' %} {% block content %}
+<h2>{{ user.chef }} <a href="{% url 'user_edit' pk=user.pk %}">Edit Profile</a></h2>
+<h3>{{ user.profile_pic }}</h3>
 <h4>{{ user.nationality }}</h4>
 
 <!-- ADD FUNCTIONALITY TO SHOW RECIPE NAME , PICTURE(blurred or not), ingredients, recipe, comments -->
 
-<h3>Chef <a href="">(+)</a></h3>
+<h3>Recipes <a href="{% url 'recipe_create' %}">(+)</a></h3>
 <ul>
   {% for recipe_name in user.recipes.all %}
   
@@ -13,3 +14,4 @@
   </li>
   {% endfor %}
 </ul>
+{% endblock %}
