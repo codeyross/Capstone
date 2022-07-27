@@ -4,10 +4,7 @@
 <ul>
   {% for user in users %}
   <li>
-    <a href="{% url 'user_detail' pk=user.id %}">{{ user.chef }}</a>
+    <a href="{% url 'user_detail' pk=user.id %}">{{ user.chef }} <img src="{{ user.profile_pic }}" alt="" class="artist-photo"></a>
   </li>
   {% endfor %}
-
-  
-</ul>
 {% endblock %}

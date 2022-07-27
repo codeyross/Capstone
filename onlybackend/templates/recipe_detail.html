@@ -1,2 +1,22 @@
-<h2>{{ recipe.recipe_name }} <a href="">(edit)</a></h2>
-<h3>Made by: {{ recipe.user.chef }}</h3>
+{% extends 'base.html' %}{% block content %}
+<h2>{{ recipe.user.chef }} <a href="{% url 'recipe_edit' pk=recipe.pk %}">Edit</a></h2>
+<h2><a href="{% url 'recipe_delete' pk=recipe.pk %}">Delete Recipe</a></h2>
+<img src="{{ user.profile_pic }}" alt="" class="artist-photo"/>
+<h3>{{ recipe.recipe_name }}</h3>
+<img src="{{ recipes.picture }}" alt="" class="artist-photo"/>
+<h4>{{ recipe.recipe_description }}</h4>
+<h3>{{ recipe.ingredients }}</h3>
+<h4> {{ recipe.recipe }} </h4>
+
+<!-- ADD FUNCTIONALITY TO SHOW RECIPE NAME , PICTURE(blurred or not), ingredients, recipe, comments -->
+
+<h3 >Recipes <a href="{% url 'recipe_create' %}">(+)</a></h3>
+<ul>
+  {% for recipe_name in user.recipes.all %}
+  
+  <li>
+    <a href="">{{ user.recipe_name }}-{{ recipe_name.recipe_name }}</a>
+  </li>
+  {% endfor %}
+</ul>
+{% endblock %}

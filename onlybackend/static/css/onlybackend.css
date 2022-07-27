@@ -1,26 +1,37 @@
+* {
+    background-color: aliceblue;
+}
+
 body {
     font-family: 'Helvetica Neue', sans-serif;
     max-width: 50em;
     margin: auto;
     padding: 2em 1em;
+    background-color: lightskyblue;
+    
   }
-  
+  nav {
+    background-color: lightskyblue;
+  }
+
   nav a {
     border: 1px solid black;
     margin: 0.5em;
     padding: 0.5em;
-    background-color: #eeeeee;
+    background-color: lightskyblue;
   }
   
   nav a:hover {
     background-color: orange;
     color: blue;
+    background-color: lightskyblue;
   }
   
   a,
   a:visited {
     text-decoration: none;
     color: blue;
+    background-color: lightskyblue;
   }
   
   a:hover {
@@ -29,10 +40,12 @@ body {
   
   ul {
     list-style-type: none;
+    background-color: lightskyblue;
   }
   
   li {
     margin: 0.25em;
+    background-color: lightskyblue;
   }
   
   h1 {
@@ -41,10 +54,12 @@ body {
     letter-spacing: -0.05em;
     text-decoration: none;
     border-bottom: 1px solid black;
+    background-color: lightskyblue;
   }
   
   h2 > a {
     font-size: 0.75em;
+    background-color: lightskyblue;
   }
   
   input {
@@ -53,7 +68,7 @@ body {
     padding: 9px;
     border: solid 1px black;
     width: 300px;
-    background: whitesmoke;
+    background: lightskyblue;
   }
   
   input[type='submit'],
@@ -96,3 +111,48 @@ body {
   .no-fav:visited {
     text-decoration: none;
   }
+
+  h1 {
+    background-color: lightskyblue;
+  }
+  
+  h2 {
+    background-color: lightskyblue;
+  }
+  h3 {
+    background-color: lightskyblue;
+  }
+
+  h4 {
+    background-color: lightskyblue;
+  }
+  ul {
+    background-color: lightskyblue;
+  }
+  li {
+    background-color: lightskyblue;
+  }
+  .uniform {
+    background-color: lightskyblue;
+  }
+form {
+    background-color: lightskyblue;
+}
+p {
+    background-color: lightskyblue;
+}
+label {
+    background-color: lightskyblue;
+}
+button {
+    background-color: lightskyblue;
+}
+
+.blur {
+  filter: blur(8px);
+  -webkit-filter: blur(8px)
+}
+
+div {
+  background-color: lightskyblue;
+}

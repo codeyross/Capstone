@@ -9,7 +9,10 @@ from django.conf import settings
 import uuid
 from django.contrib import messages
 from .forms import UserForm, RecipeForm
+from PIL import Image, ImageFilter
 # Create your views here.
+
+
 
 def user_create(request):
     if request.method == 'POST':
@@ -41,6 +44,17 @@ def user_edit(request, pk):
     else:
         form = UserForm(instance=user)
         return render(request, 'user_form.html', {'form': form})
+
+def recipe_edit(request, pk):
+    recipe = Recipes.objects.get(pk=pk)
+    if request.method == "POST":
+        form = RecipeForm(request.POST, instance=recipe)
+        if form.is_valid():
+            recipe = form.save()
+            return redirect('recipe_detail', pk=recipe.pk)
+    else:
+        form = RecipeForm(instance=recipe)
+        return render(request, 'recipe_form.html', {'form': form})
             
 
 
@@ -72,9 +86,8 @@ def paypal_cancel(request):
 
 
 def home(request):
-    message = messages
-    print(message)
-    return render(request, 'home.html', {'message': message})
+    users = User.objects.all()
+    return render(request, 'home.html', {'users': users})
 
 
 def user_list(request):
@@ -84,18 +97,25 @@ def user_list(request):
 def recipe_list(request):
     recipes = Recipes.objects.all()
     print(recipes)
-    return render(request, '/Users/rosswarren/GA-COURSE-WORK/capstone_project/backend/onlybackend/templates/recipe_list.html', {'recipes': recipes})
+    return render(request, 'recipe_list.html', {'recipes': recipes})
 
 def comments_list(request):
     comments = Comments.objects.all()
-    return render(request, '/Users/rosswarren/GA-COURSE-WORK/capstone_project/backend/onlybackend/templates/comment_list.html', {'comments': comments})
+    return render(request, 'comment_list.html', {'comments': comments})
 
 def user_detail(request, pk):
     user = User.objects.get(id=pk)
     print(user.profile_pic)
-    return render(request, '/Users/rosswarren/GA-COURSE-WORK/capstone_project/backend/onlybackend/templates/user_detail.html', {'user': user})
+    return render(request, 'user_detail.html', {'user': user})
 
 def recipe_detail(request, pk):
     recipe = Recipes.objects.get(id=pk)
-    return render(request, '/Users/rosswarren/GA-COURSE-WORK/capstone_project/backend/onlybackend/templates/recipe_detail.html', {'recipe': recipe})
+    return render(request, 'recipe_detail.html', {'recipe': recipe})
     
+def user_delete(request, pk):
+    User.objects.get(id=pk).delete()
+    return redirect('user_list')
+
+def recipe_delete(request, pk):
+    Recipes.objects.get(id=pk).delete()
+    return redirect('recipe_list')    
