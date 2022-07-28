@@ -6,13 +6,15 @@
   </head>
   <h1>Only Nans</h1>
 <div>
+    <h3>You cook so good, you should start an Only Nans</h2>
     <h2> WARNING HOT(and cold) DELICIOUS RECIPES </h2>
+    
     <h2> Sign up to see more...</h2>
     </div>
     
-    <h2>You cook so good, you should start an Only Nans</h2>
+    
     <nav>
-      <a href="user/new">Sign Up</a> 
+      <a class="button-two" href="user/new">Sign Up</a> 
     </nav>
  {% block content %}
 
@@ -21,7 +23,7 @@
 <ul>
   {% for user in users %}
   <li>
-    <a class="blur" href="{% url 'user_detail' pk=user.id %}">{{ user.chef }} <img src="{{ user.profile_pic }}" alt="" class="artist-photo"></a>
+    <a class="blur" href="{% url 'user_detail' pk=user.id %}">{{ user.chef }} <img src="{{ user.profile_pic }}" alt="" class="user-photo"></a>
   </li>
   {% endfor %}
 </ul>

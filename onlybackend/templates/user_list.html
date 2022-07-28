@@ -1,10 +1,10 @@
 {% extends 'base.html' %} {% block content %}
 
 <h2>Chefs <a href="{% url 'user_create' %}">(+)</a></h2>
-<ul>
+<ul class="hed">
   {% for user in users %}
-  <li>
-    <a href="{% url 'user_detail' pk=user.id %}">{{ user.chef }} <img src="{{ user.profile_pic }}" alt="" class="artist-photo"></a>
+  <li class="hed">
+    <a class="py-5 text-center container row py-lg-5 col-lg-6 col-md-8 mx-auto" href="{% url 'user_detail' pk=user.id %}">{{ user.chef }}  <img src="{{ user.profile_pic }}" alt="" ></a>
   </li>
   {% endfor %}
 {% endblock %}

@@ -1,6 +1,11 @@
 * {
     background-color: aliceblue;
 }
+img {
+  border: 2px solid black;
+  justify-content: center;
+  text-align: center;
+}
 
 body {
     font-family: 'Helvetica Neue', sans-serif;
@@ -30,7 +35,7 @@ body {
   a,
   a:visited {
     text-decoration: none;
-    color: blue;
+    color: black;
     background-color: lightskyblue;
   }
   
@@ -46,6 +51,13 @@ body {
   li {
     margin: 0.25em;
     background-color: lightskyblue;
+  font-family: 'Edu VIC WA NT Beginner', cursive;
+font-family: 'Oleo Script Swash Caps', cursive;
+font-family: 'Roboto', sans-serif;
+font-size: larger;
+justify-content: center;
+text-align: center;
+text-shadow: 1px 1px black;
   }
   
   h1 {
@@ -85,8 +97,11 @@ body {
     background-color: red;
   }
   
-  .artist-photo {
+  .user-photo {
     width: 400px;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
   }
   
   span.nationality {
@@ -114,10 +129,26 @@ body {
 
   h1 {
     background-color: lightskyblue;
+    background-color: lightskyblue;
+    font-family: 'Edu VIC WA NT Beginner', cursive;
+  font-family: 'Oleo Script Swash Caps', cursive;
+  font-family: 'Roboto', sans-serif;
+  font-size: 50px;
+  font-weight: 1900;
+
   }
   
   h2 {
     background-color: lightskyblue;
+    font-family: 'Edu VIC WA NT Beginner', cursive;
+  font-family: 'Oleo Script Swash Caps', cursive;
+  font-family: 'Roboto', sans-serif;
+  font-size: 25px;
+  font-weight: 10000;
+  justify-content: center;
+  text-align: center;
+  text-shadow: 1px 1px black;
+  font-size: 35px;
   }
   h3 {
     background-color: lightskyblue;
@@ -134,6 +165,11 @@ body {
   }
   .uniform {
     background-color: lightskyblue;
+  font-family: 'Edu VIC WA NT Beginner', cursive;
+font-family: 'Oleo Script Swash Caps', cursive;
+font-family: 'Roboto', sans-serif;
+font-size: larger;
+    
   }
 form {
     background-color: lightskyblue;
@@ -147,6 +183,12 @@ label {
 button {
     background-color: lightskyblue;
 }
+button-two {
+    background-color: lightskyblue;
+    justify-content: center;
+    text-align: center;
+    padding-left: 60%;
+}
 
 .blur {
   filter: blur(8px);
@@ -155,4 +197,22 @@ button {
 
 div {
   background-color: lightskyblue;
+}
+
+.hed {
+  background-color: lightskyblue;
+  font-family: 'Edu VIC WA NT Beginner', cursive;
+font-family: 'Oleo Script Swash Caps', cursive;
+font-family: 'Roboto', sans-serif;
+font-size: larger;
+justify-content: center;
+text-align: center;
+}
+
+header {
+  font-family: 'Edu VIC WA NT Beginner', cursive;
+font-family: 'Oleo Script Swash Caps', cursive;
+font-family: 'Roboto', sans-serif;
+font-size: larger;
+font-size: 45px;
 }

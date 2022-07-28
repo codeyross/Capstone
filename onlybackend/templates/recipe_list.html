@@ -3,8 +3,9 @@
 <ul>
     {% for recipes in recipes %}
     <li>
-    <a class= "uniform" href="{% url 'recipe_detail' pk=recipes.id %}">{{ recipes.recipe_name }} </a>
-    <img src="{{ recipes.picture }}" alt="" class="artist-photo"/>
+    <a class= "uniform py-5 text-center container row py-lg-5 col-lg-6 col-md-8 mx-auto" 
+    href="{% url 'recipe_detail' pk=recipes.id %}">{{ recipes.recipe_name }} </a>
+    <img src="{{ recipes.picture }}" alt="" class="user-photo"/>
 </li>
     {% endfor %}
 </ul>

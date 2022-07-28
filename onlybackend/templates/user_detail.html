@@ -1,7 +1,7 @@
 {% extends 'base.html' %} {% block content %}
 <h2>{{ user.chef }} <a href="{% url 'user_edit' pk=user.pk %}">Edit Profile</a></h2>
 <h2><a href="{% url 'user_delete' pk=user.pk %}">Delete User</a></h2>
-<img src="{{ user.profile_pic }}" alt="" class="artist-photo" />
+<img src="{{ user.profile_pic }}" alt="" class="user-photo" />
 <h4>{{ user.nationality }}</h4>
 <h4>{{ user.about }}</h4>
 
@@ -12,9 +12,10 @@
   {% for recipe_name in user.recipes.all %}
   
   <li>
-    
-    <a href="(% url 'recipe_detail' pk=recipes.pk %}">{{ user.recipe_name }}-{{ recipe_name.recipe_name }}</a>
+    <a href="{% url 'recipe_detail' pk=user.id %}">{{ recipes.recipe_name }}-{{ recipe_name.recipe_name }}</a>
+   
   </li>
   {% endfor %}
+  
 </ul>
 {% endblock %}

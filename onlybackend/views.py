@@ -105,11 +105,11 @@ def comments_list(request):
 
 def user_detail(request, pk):
     user = User.objects.get(id=pk)
-    print(user.profile_pic)
     return render(request, 'user_detail.html', {'user': user})
 
 def recipe_detail(request, pk):
     recipe = Recipes.objects.get(id=pk)
+    print(recipe)
     return render(request, 'recipe_detail.html', {'recipe': recipe})
     
 def user_delete(request, pk):
